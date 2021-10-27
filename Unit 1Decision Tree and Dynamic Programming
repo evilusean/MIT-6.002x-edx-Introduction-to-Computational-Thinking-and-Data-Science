@@ -54,8 +54,6 @@ def yieldAllCombos(items):
         yield (bag_1, bag_2)
 
 
-# Correct
-
 # Functions referenced in the grader:
 class Item(object):
     def __init__(self, n, v, w):
