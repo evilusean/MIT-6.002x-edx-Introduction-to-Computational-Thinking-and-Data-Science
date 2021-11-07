@@ -1,0 +1,21 @@
+# Generating a Power Set
+# One of the joys of Python is that there are many clever ways of implementing most algorithms. Another joy is that Python
+# has a large following of programmers, and often these programmers post their most elegant "recipes" on the web. So when
+# you need an implementation for a tricky algorithm, a good first step is to search for an existing solution you might be
+# able to use or adapt (except for on your problem sets when you're supposed to be learning!
+
+# Do a web search for "python power set" to locate other elegant Python recipes for generating the power set for a list of
+# items. In particular, look for solutions that use the itertools module. The itertools module is an extremely useful
+# toolkit, particularly for optimization problems. The code graders in 6.00.1x/2x that grade your code submissions make
+# frequent use of this module!
+
+# YOUR TASK
+# Your task is to now rewrite the powerSet(items) generator from the previous problem to make use of these recipes. Perform
+# a test run. The runtime may not be noticeably different, but shorter, more elegant code is often a good investment,
+# particularly if other programmers will be responsible for its upkeep in the future.
+
+from itertools import chain, combinations
+
+def powerSet(iterable):
+    s = list(iterable)
+    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
