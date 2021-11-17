@@ -1,3 +1,5 @@
+import pylab, random
+random.seed(0)
 def flipCoin(numFlips):
     '''
     Returns the result of numFlips coin flips of a biased coin.
